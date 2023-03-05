@@ -5,6 +5,8 @@
 The `test` package contains a number of easily comprehensible utility functions that abbreviate
 a lot of the boilerplate code associated with Go unit testing.
 
+`test.SetErrorsFatal(bool)` can be called to determine whether test failures are fatal (default = true).
+
 ## Functions
 
 The following functions resemble simple assertions that return a `bool` type indicate whether the tested 
@@ -14,10 +16,10 @@ This allows for immediate exit from the test function on test failure.
 ### Equality
 
 `ShouldBeEqual(*testing.T, interface{}, interface{}, ...options) bool`
-:  compares two values which are expected to be indentical via deep comparison
+:  compares two values which are expected to be identical via deep comparison
 
 `ShouldNotBeEqual(*testing.T, interface{}, interface{}, ...options) bool`
-:  compares two values which are expected not to be indentical via deep comparison
+:  compares two values which are expected not to be identical via deep comparison
 
 ### True/False
 
